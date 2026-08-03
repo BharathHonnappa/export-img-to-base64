@@ -1,0 +1,18 @@
+{
+  "name": "export-base64-md",
+  "version": "1.0.0",
+  "description": "Export the active Obsidian note as a single markdown file with images inlined as base64.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production"
+  },
+  "devDependencies": {
+    "@electron/remote": "^2.1.0",
+    "@types/node": "^20.0.0",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.19.0",
+    "obsidian": "latest",
+    "typescript": "^5.4.0"
+  }
+}

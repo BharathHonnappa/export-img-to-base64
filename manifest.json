@@ -1,0 +1,10 @@
+{
+  "id": "export-base64-md",
+  "name": "Export as Base64 MD",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Exports the active note as a single markdown file with every image embed inlined as a base64 data URI. Vault note stays untouched.",
+  "author": "Bharath H",
+  "authorUrl": "https://bharathh.xyz",
+  "isDesktopOnly": true
+}
