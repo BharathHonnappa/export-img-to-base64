@@ -15,24 +15,12 @@ dialog, done.
 
 ## Why I built this
 
-I write CTF/HTB writeups in Obsidian, screenshots and all, then publish them
-on a self-hosted site with a MongoDB-backed CMS. Storing images directly in
-MongoDB (or shipping raw base64 in the document) burns through a free-tier
-database fast a handful of image-heavy writeups is enough to blow past a
-500MB tier.
+I use **Obsidian** mostly to prepare writeups for the machines and challenges I solve. I publish these writeups on my website, which uses a 𝗠𝗼𝗻𝗴𝗼𝗗𝗕-𝗯𝗮𝗰𝗸𝗲𝗱 𝗖𝗠𝗦 for storage. Storing images directly in 𝗠𝗼𝗻𝗴𝗼𝗗𝗕 requires a lot of space, and a few images are enough to blow past a 500MB tier.
 
-So the images don't stay in MongoDB at all. My publishing backend intercepts
-the base64 data URIs in the uploaded markdown, content-hashes each image
-(SHA-256, so the same screenshot never gets uploaded twice), pushes new ones
-to a public GitHub repo, and rewrites the links to a jsDelivr CDN URL before
-the (now lightweight) markdown ever touches the database.
+Therefore, I designed my website to intercept base64 data URIs in uploaded markdown in a public GitHub repo and rewrite the links to a 𝗷𝘀𝗗𝗲𝗹𝗶𝘃𝗿 𝗖𝗗𝗡 𝗨𝗥𝗟 before the markdown ever touches the database.
 
-This plugin is the missing first step in that pipeline: it turns a normal
-Obsidian writeup screenshots embedded the normal way into the single
-self-contained base64 markdown file my upload endpoint expects, without
-manually re-encoding every image by hand. Vault stays fast to write in;
-database stays lean; images live on a free CDN instead of counting against
-storage quota either way.
+The missing piece was getting from "writeup with normal image embeds in Obsidian" to "one flat markdown file with base64 inlined" without doing it by hand. So I built a plugin for it.
+Hope its useful for y'all.
 
 ## Installation
 
