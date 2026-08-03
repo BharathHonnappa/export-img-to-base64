@@ -1,5 +1,3 @@
-# Export Image as Base64 MD
-
 Export the active note as a single, self-contained markdown file with every
 image embed inlined as a base64 data URI one command, one native save
 dialog, done.
