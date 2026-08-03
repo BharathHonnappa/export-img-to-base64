@@ -1,5 +1,5 @@
 {
-  "id": "export-base64-md",
+  "id": "export-img-to-base64",
   "name": "Export as Base64 MD",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
